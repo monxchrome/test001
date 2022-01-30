@@ -7,6 +7,7 @@ class Blog(models.Model):
     content = models.TextField(null=True, blank=True)
     created_ad = models.DateTimeField(auto_now_add=True)
     updated_ad = models.DateTimeField(auto_now=True)
+    is_published = models.BooleanField(default=False)
 
     def __str__(self):
         return f" {self.id}: {self.title}"
