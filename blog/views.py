@@ -2,6 +2,7 @@ import datetime
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from . models import Blog
 
 def index(request):
     created_p = "30.01.2022/13:13"
@@ -14,4 +15,11 @@ def index(request):
     return HttpResponse(res)
 
 def welocme_page(request):
-    return render(request, 'index.html')
+    date = datetime.datetime.now()
+    return render(request, 'index.html', context={'date': date})
+
+def get_list_blogs(request):
+    blogs = Blog.objects.all()
+    blogs_id = [(i.id, i.title) for i in blogs]
+
+    return render(request, 'all_blogs.html', context={'blogs': blogs})
