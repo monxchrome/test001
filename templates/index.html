@@ -1,53 +1,129 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="techno studio"><meta name="description" content="">
-    <title>Welcome!</title>
-    <link rel="stylesheet" href="/nicepage.css?version=6ecd6ade-c189-418c-8fee-9c8d5e89069b" media="screen">
-    <script class="u-script" type="text/javascript" src="//static.nicepage.com/shared/assets/jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="//capp.nicepage.com/48275668d8add8f020dd04c401264218ca36d074/nicepage.js" defer=""></script>
-<link id="u-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
-    <style class="u-style">.u-section-2 {background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/2d064f519f9a51ec8249e83f/pexelsphoto2473183.jpg); background-position: 50% 50%}
-.u-section-2 .u-sheet-1 {min-height: 724px}
-.u-section-2 .u-text-1 {text-transform: uppercase; letter-spacing: 10px; font-size: 6rem; width: 910px; margin: 60px auto 0}
-.u-section-2 .u-text-2 {text-transform: uppercase; letter-spacing: 10px; font-size: 1.25rem; font-weight: 300; width: 910px; margin: 22px auto 60px}
-@media (max-width: 1199px){ .u-section-2 .u-sheet-1 {min-height: 597px} }
-@media (max-width: 991px){ .u-section-2 .u-sheet-1 {min-height: 457px}
-.u-section-2 .u-text-1 {font-size: 3.75rem; width: 720px}
-.u-section-2 .u-text-2 {font-size: 1rem; width: 720px} }
-@media (max-width: 767px){ .u-section-2 .u-sheet-1 {min-height: 343px}
-.u-section-2 .u-text-1 {width: 540px}
-.u-section-2 .u-text-2 {width: 540px} }
-@media (max-width: 575px){ .u-section-2 .u-sheet-1 {min-height: 216px}
-.u-section-2 .u-text-1 {width: 340px}
-.u-section-2 .u-text-2 {width: 340px} }
-</style>
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"url": "https://website44541.nicepage.io/Page-1.html",
-		"logo": "//capp.nicepage.com/92109bfaad894f94f03729a226749633a670aed5/images/default-logo.png"
-}</script>
-    <meta property="og:title" content="Page 1">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#478ac9">
-    <link rel="canonical" href="https://website44541.nicepage.io/Page-1.html">
-    <meta property="og:url" content="https://website44541.nicepage.io/Page-1.html">
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Clean Blog 111</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
 </head>
 
-<h1 style="color:#ffffff; text-align: center">Now Date: {{ date }} </h1>
-<h2 style="color:#ffffff; text-align: center">Date Create:30.01.2022/14:05</h2>
+<body bgcolor="black">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">MONXSENSE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">ALL PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">CONTACTS</a></li>
+                    <form class="d-flex" action="{% url 'index' %}">
+                        {% comment %}
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" class="form-control" name="q" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                            <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                        </div> {% endcomment %}
+                        <input type="text" name="q" class="form-control h-75">
+                        <button type="submit" class="btn btn-success h-75"><span class="material-icons">search</span></button>
 
-<body class="u-body" bgcolor="#000000">
-    <section class="u-align-center u-clearfix u-image u-section-2" id="sec-b92d">
-        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-
-        <h1 class="u-heading-font u-text u-text-body-alt-color u-title u-text-1" style="color:#ffffff; text-align: center;">Hello Webnauts!</h1>
-            <h4 class="u-text u-text-body-alt-color u-text-2" style="color:#ffffff; text-align: center;">Hi Webnauts!</h4>
-
+                    </form>
+                </ul>
+            </div>
         </div>
-    </section>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url({% static 'assets/img/1.gif' %})">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>MON<font size="10" color="#00010f">X</font><font color="black">SENSE</font></h1>
+                        <span class="subheading">Best Software for 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">MONXSENSE production</h2>
+                        <h3 class="post-subtitle">For you, for all.</h3>
+                    </a>
+                    <p class="post-meta">
+                        Public for 04.02.2022
+                    </p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+
+
+                <!-- Pager-->
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!">
+                                <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2021</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
+
 </html>
