@@ -5,8 +5,18 @@ from django.http import HttpResponse
 from . models import Blog
 
 def index(request):
-    return render(request, 'index.html',)
+    blogs = Blog.objects.filter(is_published=True)
+    context = {
+        "blogs": blogs
+    }
+    return render(request, 'index.html', context=context)
 
-#def welocme_page(request):
+def welcome(request):
+    return render(request, 'welcome.html',)
 
-#def get_list_blogs(request):
+def one_post(request, pk):
+    post = get_object_or_404(Blog, pk=pk)
+    context = {
+        "blogs": blogs
+    }
+    return render (request, 'one_post', context=context)
