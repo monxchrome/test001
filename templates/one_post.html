@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{post.title}}</h1>
+    <h2>{{post.created_ad}}</h2>
+    <img src="{{post.image.url}}" class="img-fluid" width="1300" height="731">
+    <p>{{post.content}}</p>
+
+
+</div>
+
+
+{% endblock content %}
