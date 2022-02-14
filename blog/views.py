@@ -22,3 +22,6 @@ def show_gallery(request):
 
 def contacts(request):
     return render(request, 'contacts.html')
+
+def buy(request):
+    return render(request, 'buy.html')
